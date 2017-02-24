@@ -29,6 +29,13 @@
 * elenco dei post autoridimensionato al numero dei post (si vedono tutti)
 * info a destra: evidenziati stato e operatore, nome coda accorciato, email cliccabile, elenco ticket collegati in linea, numero di telefono evidenziato (compreso l'eventuale `821`)
 
+**Migliorie cambio gestore:**
+
+* selezione gestore: inverti nome e cognome e riordina voci
+* autoselect del precedente proprietario
+* imposta oggetto predefinito "per Tizio Caio"
+* imposta testo pedefinito "fatto"
+
 ---
 
 **Configurazione OTRS:**
