@@ -3,9 +3,9 @@
 // @namespace   camelsoft
 // @description Miglioramenti ad OTRS
 // @include     https://helpdesk.ammcentr.unipd.it/otrs/index.pl*
-// @icon        https://cava.link/favicon-32x32.png
-// @downloadURL https://cava.link/it/blog/posts/76/attach?raw=true
-// @version     1.3.8
+// @icon        https://github.com/acavalin/otrs_enhancements/raw/master/xm_icon.png
+// @downloadURL https://github.com/acavalin/otrs_enhancements/raw/master/helpdesk.user.js
+// @version     1.3.9
 // @grant       none
 // ==/UserScript==
 
@@ -53,7 +53,7 @@ $('#Logo').hide();
 
 // riquadro credits + links
 var links_hp     = '<a href="https://cava.link/" target="_blank">Cava.link</a>',
-    links_script = '<a href="https://cava.link/s/HcfrJ" target="_blank">OTRS script</a>',
+    links_script = '<a href="https://github.com/acavalin/otrs_enhancements" target="_blank">OTRS script</a>',
     links_css    = 'position: absolute; top: 0.5rem; left: 43%; padding: 0.3rem 0.6rem; z-index: 65000;'+
       'background: linear-gradient(to bottom, rgb(249, 249, 249) 0%, rgb(241, 241, 241) 100%);'+
       'border-radius: 0.5rem; border: 1px outset red;';
