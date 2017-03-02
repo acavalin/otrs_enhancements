@@ -5,7 +5,7 @@
 // @include     https://helpdesk.ammcentr.unipd.it/otrs/index.pl*
 // @icon        https://github.com/acavalin/otrs_enhancements/raw/master/xm_icon.png
 // @downloadURL https://github.com/acavalin/otrs_enhancements/raw/master/helpdesk.user.js
-// @version     1.3.9
+// @version     1.3.10
 // @grant       none
 // ==/UserScript==
 
@@ -384,6 +384,12 @@ if ($('#ArticleTableBody').length > 0) {
         parent().show().
         length * 20;
       storico.height(storico_height > 100 ? 100 : storico_height);
+      // indica se la richiesta proviene da un TEAM
+      var team_row = storico.find('table tbody tr:first td[title*="TEAM"]');
+      if (team_row.length != 0) {
+        var team = team_row.attr('title').replace(/.+(TEAM[^;)]+).+/, '$1');
+        $('<span style="background-color: red; margin-left: 1rem;">Creato in: '+team+'</span>').prependTo('.TicketList .ControlRow');
+      }
     },//success
     'html'
   );
