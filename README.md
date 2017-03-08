@@ -63,14 +63,13 @@ Infine gli elenchi (*Visualizza le mie code* e *Visualizzazione stato*) devono e
 
 * scaricate lo script helpdesk.user.js
 * installate l'add-on [Greasemonkey](http://www.greasespot.net/)
-* aprite col browser il file helpdesk.user.js
+* aprite col browser [questo url](https://github.com/acavalin/otrs_enhancements/raw/master/helpdesk.user.js)
 * accettate l'installazione dello script
 
 **Installazione su Chrome:**
 
-* scaricate lo script helpdesk.user.js
 * installate l'add-on [Tampermonkey](http://tampermonkey.net/)
 * cliccate sull'iconcina di Tampermonkey in alto a destra e selezionate Dashboard/Bacheca
 * cliccate sull'iconcina `+`
-* nell'editor cancellate il testo e copiate ed incollate il contenuto dello script (apritelo con notepad)
+* nel campo "Update URL" incollate [questo url](https://github.com/acavalin/otrs_enhancements/raw/master/helpdesk.user.js)
 * premete l'inconcina del floppy per salvare il tutto
