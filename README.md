@@ -29,6 +29,7 @@
 * elenco dei post autoridimensionato al numero dei post (si vedono tutti)
 * info a destra: evidenziati stato e operatore, nome coda accorciato, email cliccabile, elenco ticket collegati in linea, numero di telefono evidenziato (compreso l'eventuale `821`)
 * evidenzia se il ticket proviene da un TEAM
+* icone sulla barra delle azioni
 
 **Migliorie cambio gestore:**
 
