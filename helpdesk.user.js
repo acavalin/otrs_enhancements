@@ -5,7 +5,7 @@
 // @include     https://helpdesk.ammcentr.unipd.it/otrs/index.pl*
 // @icon        https://github.com/acavalin/otrs_enhancements/raw/master/xm_icon.png
 // @downloadURL https://github.com/acavalin/otrs_enhancements/raw/master/helpdesk.user.js
-// @version     1.3.10
+// @version     1.3.11
 // @grant       none
 // ==/UserScript==
 
@@ -83,13 +83,17 @@ if ($('.OverviewBox h1:contains(Lista Ticket: Le mie Code)').length > 0 ||
   $('#OverviewBody tr.miei').prependTo( $('#OverviewBody tbody') );
   // sposta righe non mie in basso
   $('#OverviewBody tr.assegnati').appendTo( $('#OverviewBody tbody') );
+
+  // metti bordo sui blocchi di righe
+  $('#OverviewBody tr.miei:last       td').css('border-bottom', '1px solid black');
+  $('#OverviewBody tr.assegnati:first td').css('border-top'   , '1px solid black');
  
   // evidenzia utente e titolo
   $('#OverviewBody tr[id^=TicketID] td:nth-child(6)').each(function () {
     $(this).find('div:first').
       css('font-weight', 'bold').css('float', 'left').css('white-space', 'nowrap').
       css('padding-right', '0.5em');
-    var t = $(this).find('div:last').css('white-space', 'wrap');
+    var t = $(this).find('div:last').css('white-space', 'wrap').css('display', 'inherit');
     t.text( t.attr('title') );
   });
   // unica linea per utente e titolo + stessa larghezza per l'utente
