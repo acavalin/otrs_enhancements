@@ -5,7 +5,7 @@
 // @include     https://helpdesk.ammcentr.unipd.it/otrs/index.pl*
 // @icon        https://github.com/acavalin/otrs_enhancements/raw/master/xm_icon.png
 // @downloadURL https://github.com/acavalin/otrs_enhancements/raw/master/helpdesk.user.js
-// @version     1.3.13
+// @version     1.3.14
 // @grant       none
 // ==/UserScript==
 
@@ -402,6 +402,9 @@ if ($('#ArticleTableBody').length > 0) {
   $('.ActionRow ul.Actions').
     find('li').css('margin-right', '-1px').
     find('a').css('border', '2px outset #555').css('border-radius', '0.3rem');
+  $('#DestQueueID').parents('form:first').
+    css('border', '2px outset #555').css('border-radius', '0.3rem').css('padding', '0.13rem').
+    find('select').css('margin', 'auto');
   $('.ActionRow img').css('vertical-align', 'text-bottom').css('margin-left', '0.2rem');
   
   // mostra storico sopra alle righe delle note
