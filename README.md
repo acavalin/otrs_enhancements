@@ -74,3 +74,7 @@ Infine gli elenchi (*Visualizza le mie code* e *Visualizzazione stato*) devono e
 * nel campo "Update URL" incollate [questo url](https://github.com/acavalin/otrs_enhancements/raw/master/helpdesk.user.js)
 * premete l'inconcina del floppy per salvare il tutto
 * cliccate su *0 min* nella colonna `Last  updated`
+
+---
+
+Questo script ha una sua pagina su [Greasy Fork](https://greasyfork.org/en/scripts/28340-helpdesk-ammcentr-enhancements).
