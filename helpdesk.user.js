@@ -5,7 +5,7 @@
 // @include     https://helpdesk.ammcentr.unipd.it/otrs/index.pl*
 // @icon        https://github.com/acavalin/otrs_enhancements/raw/master/xm_icon.png
 // @downloadURL https://github.com/acavalin/otrs_enhancements/raw/master/helpdesk.user.js
-// @version     1.3.14
+// @version     1.4.0
 // @grant       none
 // ==/UserScript==
 
@@ -31,6 +31,24 @@ var icons = {
   Nota:      "R0lGODlhEAAQAMQAAJvN/MXi/naZtl13lavU+6TR+7TZ/Pz9/r7e/VpwiUhacfL1+cjk/rHX/GF8m4Gnwrrc/cDf/Za805/E2Lfa/OLq9K/Q4ubv96jL3Yyyy7DS42eHp1Nle+zx9////////yH5BAEAAB8ALAAAAAAQABAAAAV+4CeOZEl6aKqWnoVNUvY8grB5Y6t6x3JVlQHOo/EwjoFAJIJAVBYO1MTISDIhFERjIfRIDkklAmtoELiox2KJoJQJhEKhkkAJOmOKOV4AACocdh1kZnJ+f4EfHncdjY0ABY2JIh4ODgMJCRySCjgnO5uTJiccoqM5pqeUnh8hADs=",
   Chiudi:    "R0lGODlhEAAQAMQfAOt0dP94eOFjY/a0tP/JyfFfX/yVlf6mppNtbf5qanknJ9dVVeZqat5eXpiMjGo4OIUvL3pGRthWVuhvb1kaGv39/f1lZdg7O/7Y2F8/P+13d4tcXNRTU2dCQv///////yH5BAEAAB8ALAAAAAAQABAAAAV/4Cd+Xml6Y0pGTosgEap6G0YQh6FDskhjGg0AMJkwAjxfBygkGhmCAAXl6QyGnuLFI4g+qNbixLMNdBNfkpXBLncbial6AC17Gvg4eND1BPB3cHJVBguGhwsSHHo+GRqKHJGRCQo9JI4WBZoFFpUVMw8QCqMQU58qJCclqKytIQA7"
 };
+
+// localStorage shortcuts
+Storage.prototype.rm = function(k) { this.removeItem(k); };
+Storage.prototype.get = function(k, default_value) {
+  var v = JSON.parse(this.getItem(k) || 'null');
+  return (typeof v !== 'undefined' && v != null) ? v : default_value;
+};// Storage.prototype.get -----------------------------------------------------
+Storage.prototype.set = function(k, v) {
+  try {
+    return (typeof v !== 'undefined' && v != null) ?
+      this.setItem(k, JSON.stringify(v)) :
+      this.rm(k);
+  } catch (e) {
+    console.log('ERROR: key not saved');
+    return null;
+  }//try-catch
+};// Storage.prototype.set -----------------------------------------------------
+var $ls = localStorage; // abbrevia localStorage
 
 function extend_uris () {
   $('a[title]:contains([..])').each(function () {
@@ -290,9 +308,24 @@ if ($('#ArticleTableBody').length > 0) {
     after('<b>'+ticket_descr+'</b>').
     after('<i style="float: right">'+tempo_descr+'</span>');
   
-  // nascondi righe di sistema
-  $('#ArticleTableBody tbody tr[class*="system-email-"]').hide();
-
+  // gestione toggle righe di sistema
+  function toggle_sys_rows () {
+    $('#ArticleTableBody tbody tr[class*="system-email-"]').
+      toggle( !$ls.get('prefs.hide_sys_rows', true) );
+  }//toggle_sys_rows
+  
+  toggle_sys_rows(); // toggle alla prima visualizzazione
+  
+  // toggle su onclick del pulsantino che aggiorna le preferenze
+  var sys_rows_class = $ls.get('prefs.hide_sys_rows', true) ? ' Active' : '';
+  $('<a href="#" title="Mostra righe di sistema" class="OneArticle'+sys_rows_class+'"><i style="font-size: small">Sys</i><span>Mostra righe di sistema</span></a>').
+    prependTo('.TicketList .ControlRow .ArticleView.Icons').
+    click(function () {
+      var hide_rows = $ls.set('prefs.hide_sys_rows', !$ls.get('prefs.hide_sys_rows', true));
+      $(this).toggleClass('Active', hide_rows);
+      toggle_sys_rows();
+    });
+  
   // ridimensiona lo scroller in modo da mostrare tutte le righe
   var rows = $('#ArticleTableBody tbody tr:visible');
   $('#ArticleTableBody div.Scroller').
