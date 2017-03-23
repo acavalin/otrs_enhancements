@@ -25,7 +25,7 @@
 * compattata l'interfaccia principale e le info sulla destra
 * filtri su `Area` e `Servizio` per lo spostamento di coda
 * storico del ticket subito visibile sopra all'elenco dei post e filtrato per cambio di operatore e spostamenti (le cose veramente utili)
-* nascoste righe di sistema nell'elenco dei post 
+* toggle righe di sistema nell'elenco dei post + salvataggio in locale della preferenza
 * elenco dei post autoridimensionato al numero dei post (si vedono tutti)
 * info a destra: evidenziati stato e operatore, nome coda accorciato, email cliccabile, elenco ticket collegati in linea, numero di telefono evidenziato (compreso l'eventuale `821`)
 * evidenzia se il ticket proviene da un TEAM
