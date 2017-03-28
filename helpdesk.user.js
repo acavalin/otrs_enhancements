@@ -5,7 +5,7 @@
 // @include     https://helpdesk.ammcentr.unipd.it/otrs/index.pl*
 // @icon        https://github.com/acavalin/otrs_enhancements/raw/master/xm_icon.png
 // @downloadURL https://github.com/acavalin/otrs_enhancements/raw/master/helpdesk.user.js
-// @version     1.4.0
+// @version     1.4.1
 // @grant       none
 // ==/UserScript==
 
@@ -370,10 +370,12 @@ if ($('#ArticleTableBody').length > 0) {
     $(this).html(tel);
   });
   
-  // rimuovi intestazioni delle widgets sulla destra
+  // rimuovi intestazioni delle widgets sulla destra...
   $('div.SidebarColumn div.WidgetSimple').
     css('margin-bottom', '0').
     find('div.Header').hide();
+  // ...e il bordo in alto
+  $('div.SidebarColumn div.WidgetSimple:gt(0)').css('border-top', '0');
   
   // evidenzia stato ticket
   var p_stato = $('fieldset label:contains(Stato:)').next();
@@ -421,6 +423,8 @@ if ($('#ArticleTableBody').length > 0) {
     ul.find('li.Header').text(title);
     ul.find('li:not(.Header)').css('display', 'inline-block');
   });
+  
+  $('#Footer').hide(); // nascondi footer
   
   // aggiungi icone ai link delle azioni
   $.each(icons, function (label, data) {
