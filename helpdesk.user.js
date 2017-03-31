@@ -5,7 +5,7 @@
 // @include     https://helpdesk.ammcentr.unipd.it/otrs/index.pl*
 // @icon        https://github.com/acavalin/otrs_enhancements/raw/master/xm_icon.png
 // @downloadURL https://github.com/acavalin/otrs_enhancements/raw/master/helpdesk.user.js
-// @version     1.4.1
+// @version     1.4.2
 // @grant       none
 // ==/UserScript==
 
@@ -406,7 +406,7 @@ if ($('#ArticleTableBody').length > 0) {
   p_cogn.hide().prev().hide().prev().hide().prev().append( p_cogn.text().trim() );
   // rendi leggibile la sede
   var p_sede = $('fieldset label:contains(Commento:)').next();
-  p_sede.text( p_sede.attr('title').trim().replace(/DIPARTIMENTO (DI|DEI)/,'DIP.') );
+  p_sede.text( (p_sede.attr('title')||'').trim().replace(/DIPARTIMENTO (DI|DEI)/,'DIP.') );
   
   // nascondi nome utente che e' uguale alla mail
   $('fieldset label:contains(Nome utente:)').next().andSelf().hide();
