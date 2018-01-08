@@ -1,5 +1,5 @@
 # otrs_enhancements
-[Greasemonkey](http://www.greasespot.net/)/[Tampermonkey](http://tampermonkey.net/) script per migliorare l'usabilità dell'installazione di OTRS nell'università di Padova (v 3.3.8).
+[Tampermonkey](http://tampermonkey.net/) script per migliorare l'usabilità dell'installazione di OTRS nell'università di Padova (v 3.3.8).
 
 ---
 
