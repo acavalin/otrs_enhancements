@@ -38,6 +38,10 @@
 * imposta oggetto predefinito "per Tizio Caio"
 * imposta testo pedefinito "fatto"
 
+**Migliorie lato custome:**
+
+* nascoste le righe di sistema
+
 ---
 
 **Configurazione OTRS:**
