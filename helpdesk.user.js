@@ -106,8 +106,6 @@ function setup_admin ($) {
     $('div.WidgetAction.Close').remove();
     
     function setup_cruscotto () {
-      var container = 'form .DataTable tbody ';
-      
       // il delegate non funziona...
       $('div[id$=TicketOpen-box] ul.Tab.Actions a').click(function () {
         setTimeout(setup_cruscotto, 1000);
@@ -185,7 +183,7 @@ function setup_admin ($) {
       $('form .DataTable tbody tr td:nth-child(3)').
         css('background-color', 'orange').
         find('a').css('color', 'black');
-  
+
       // avvisa se ci son tickets
       //if ($('#OverviewBody tr[id^=TicketID]').length > 0)
       //  alert('HD: ' + num_tickets + ' tickets nuovi! :O');
