@@ -46,7 +46,7 @@
 
 **Configurazione OTRS:**
 
-Ricordarsi che le colonne nelle videate **devono** riportare nell'ordine i seguenti campi: 
+Ricordarsi che le colonne nelle videate **devono** riportare nell'ordine i seguenti campi:
 
 1. TicketNumber
 2. Tempo trascorso
@@ -57,6 +57,20 @@ Ricordarsi che le colonne nelle videate **devono** riportare nell'ordine i segue
 7. Coda
 
 per modificare l'elenco e l'ordine delle colonne dovete cliccare sul triangolino situato sull'estrema destra dell'intestazione (qui vi consiglio anche di impostare il numero più elevato di righe per pagina).
+Potete aggiungere quanti campi volete **dopo** la colonna 7.
+
+Per la schermata del cruscotto invece le colonne devono essere:
+
+1. TicketNumber
+2. Tempo trascorso
+3. CustomerName
+4. Titolo
+5. Stato
+6. Gestisci
+7. Operatore
+8. Coda
+
+per modificare l'elenco e l'ordine delle colonne dovete cliccare sull'ingranaggio situato sull'estrema destra dell'intestazione della tabella "Ticket Aperti" (viene mostrato quando ci passate sopra col mouse).
 Potete aggiungere quanti campi volete **dopo** la colonna 7.
 
 Infine gli elenchi (*Visualizza le mie code* e *Visualizzazione stato*) devono essere nel formato "Piccolo", cliccate sulla lettera `S` in alto a destra dove vedete i tre quadratini `S M L`
