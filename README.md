@@ -77,19 +77,9 @@ Infine gli elenchi (*Visualizza le mie code* e *Visualizzazione stato*) devono e
 
 ---
 
-**Installazione su Firefox >= `57.0` e Chrome:**
+**Installazione su Firefox e Chrome:**
 
 * installate l'add-on [Tampermonkey](http://tampermonkey.net/)
-* cliccate sull'iconcina di Tampermonkey in alto a destra e selezionate Dashboard/Bacheca
-* cliccate sull'iconcina `+`
-* nel campo "Update URL" incollate [questo url](https://github.com/acavalin/otrs_enhancements/raw/master/helpdesk.user.js)
-* premete l'inconcina del floppy per salvare il tutto
-* cliccate su *0 min* nella colonna `Last  updated`
-* si aprira' la relativa scheda, premere "Aggiorna"
-
-**Installazione su Firefox < `57.0`:**
-
-* installate l'add-on [Greasemonkey](http://www.greasespot.net/)
 * aprite col browser [questo url](https://github.com/acavalin/otrs_enhancements/raw/master/helpdesk.user.js)
 * accettate l'installazione dello script
 
