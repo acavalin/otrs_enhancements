@@ -5,7 +5,7 @@
 // @include     https://helpdesk.ammcentr.unipd.it/otrs/index.pl*
 // @include     https://helpdesk.ammcentr.unipd.it/otrs/customer.pl?Action=CustomerTicketZoom*
 // @icon        data:image/png;base64,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
-// @version     4.0.0
+// @version     5.0.0
 // @grant       none
 // ==/UserScript==
 
@@ -34,6 +34,11 @@ function setup_admin ($) {
     Chiudi:    "R0lGODlhEAAQAMQfAOt0dP94eOFjY/a0tP/JyfFfX/yVlf6mppNtbf5qanknJ9dVVeZqat5eXpiMjGo4OIUvL3pGRthWVuhvb1kaGv39/f1lZdg7O/7Y2F8/P+13d4tcXNRTU2dCQv///////yH5BAEAAB8ALAAAAAAQABAAAAV/4Cd+Xml6Y0pGTosgEap6G0YQh6FDskhjGg0AMJkwAjxfBygkGhmCAAXl6QyGnuLFI4g+qNbixLMNdBNfkpXBLncbial6AC17Gvg4eND1BPB3cHJVBguGhwsSHHo+GRqKHJGRCQo9JI4WBZoFFpUVMw8QCqMQU58qJCclqKytIQA7"
   };
 
+  String.prototype.capitalize = function () {
+    // capitalize => http://stackoverflow.com/a/38530325
+    return this.replace(/\b\w/g, function(l){ return l.toUpperCase() })
+  }// String.prototype.capitalize
+  
   // localStorage shortcuts
   Storage.prototype.rm = function(k) { this.removeItem(k); };
   Storage.prototype.get = function(k, default_value) {
@@ -58,6 +63,12 @@ function setup_admin ($) {
     });
   }//extend_uris
 
+  function get_cognome(fullname) {
+    var words = fullname.toString().split(' ');
+    words.shift(); // remove name
+    return words.join(' ');
+  }// get_cognome
+
   // sort select options by text => http://stackoverflow.com/a/278509
   function sortSelect (selElem) {
     var tmpAry = new Array(), i = 0;
@@ -69,12 +80,16 @@ function setup_admin ($) {
     }
 
     tmpAry.sort();
-
+    
+    var cur_val = $(selElem).val();
+    
     while (selElem.options.length > 0)
       selElem.options[0] = null;
 
     for (i=0; i < tmpAry.length; i++)
       selElem.options[i] = ( new Option(tmpAry[i][0], tmpAry[i][1]) );
+    
+    $(selElem).val(cur_val);
   }//sortSelect
 
   // piccole migliorie per guadagnare spazio
@@ -493,8 +508,24 @@ function setup_admin ($) {
     // nascondi codice cliente = email cliente (gia' presente in basso)
     $('fieldset label:contains(Codice cliente:)').hide().next().hide().next().hide();
     // evidenzia operatore
-    var p_op = $('fieldset label:contains(Operatore:)').next();
-    p_op.html( '<b>'+p_op.text().trim()+'</b>' );
+    var p_op = $('fieldset label:contains(Operatore:)').next(),
+        op_name = p_op.text().trim().toUpperCase();
+    if (op_name != 'ADMIN OTRS') {
+      $('.ActionRow ul.Actions a:contains(Operatore)').
+        append(' ('+get_cognome(op_name)+')');
+      
+      p_op.html( '<b>'+op_name+'</b>' ).find('b').
+        css('border', '4px outset red').
+        css('padding', '0.25rem').
+        css('background-color', 'black').
+        css('color', 'white').
+        css('font-family', 'monospace');
+    } else {
+      $('.ActionRow ul.Actions a:contains(Operatore)').
+        append(' (libero)');
+      
+      p_op.html( '<b>'+op_name+'</b>' );
+    }// if-else
     // rendi leggibile la coda
     var p_coda = $('fieldset label:contains(Coda:)').next(),
         //coda = p_coda.text().trim().replace(/::/g,'<hr style="border-top: 1px solid black">');
@@ -566,14 +597,17 @@ function setup_admin ($) {
         var storico_height = storico.find('tr td:first-child').
           filter(':contains(Move), :contains(OwnerUpdate)').
           parent().show().
-          length * 20;
+          length * 22;
         storico.height(storico_height > 100 ? 100 : storico_height);
         // indica se la richiesta proviene da un TEAM
         var team_row = storico.find('table tbody tr:first td[title*="TEAM"]');
         if (team_row.length != 0) {
           var team = team_row.attr('title').replace(/.+(TEAM[^;)]+).+/, '$1');
           $('<span style="background-color: red; margin-left: 1rem;">Creato in: '+team+'</span>').prependTo('.TicketList .ControlRow');
-        }
+        }//if
+        // evidenzia righe col cambio operatore
+        storico.find('table tbody tr td:contains(Nuovo operatore):contains(@unipd.it)').
+          css('background-color', 'lightpink');
       },//success
       'html'
     );
@@ -589,25 +623,23 @@ function setup_admin ($) {
     //  ':contains(nome.cogn@unipd.it)'
     //).hide()
 
-    // swap nome e cognome
-    sel_owner.find('option').each(function () {
-      var o = $(this);
-      o.text(
-        o.text().trim().
-          replace(/^([^ ]+) (.+)/, '$2 $1').
-          replace(/\b\w/g, function(l){ return l.toUpperCase() }) // capitalize => http://stackoverflow.com/a/38530325
-      );
-    });
-
-    // resort options
-    sortSelect( sel_owner.get(0) );
-
     // imposta oggetto predefinito
     $('#NewOwnerID, #OldOwnerID').change(function () {
-      $('#Subject').val(
-        'per ' + $(this).find('option:selected').text().replace(/^(.: )*.+ (\w+) .+/, '$2')
-      );
-
+      var name = $(this).find('option:selected').text().
+        replace(/^([0-9]+: )*([^()]+)( \(.+\))/, '$2').
+        split(' ').pop();
+      $('#Subject').val('per ' + name.capitalize());
+      
+      setTimeout(function () {
+        // swap nome e cognome
+        sel_owner.find('option').each(function () {
+          $(this).text( $(this).text().trim().replace(/^([^ ]+) (.+)/, '$2 $1').capitalize() );
+        });
+        
+        // resort options
+        sortSelect( sel_owner.get(0) );
+      }, 1000);
+      
       return false;
     });
 
@@ -617,7 +649,7 @@ function setup_admin ($) {
 
     // testo predefinito
     $('#RichText').
-      val('fatto').
+      val('...').
       bind('focus', function () { $(this).select(); }); // seleziona tutto onfocus
   }//if
 
